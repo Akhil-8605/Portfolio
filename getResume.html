@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --light-gray: #e0e0e0;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 20px;
+        }
+
+        .resume-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: var(--white);
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .resume-image img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid var(--light-gray);
+        }
+
+        .download-section {
+            margin-top: 20px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: var(--secondary-color);
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        @media (max-width:786px ) {
+
+            .resume-container{
+                margin-top: 5px;
+            }
+
+            button{
+                font-size: 8px;
+            }
+        }
+    </style>
+    <button class="btn cta-btn primary-btn" ><a href="index.html">&#8592; Back</a></button>
+    <div class="resume-container">
+        <h1>My Resume</h1>
+        <div class="resume-image">
+            <img src="Resume.png" alt="Resume Image">
+        </div>
+        <div class="download-section">
+            <a href="Resume.png" download="Resume.png" class="download-btn">Download Resume</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Akhilesh Adam. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
