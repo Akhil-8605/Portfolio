@@ -10,7 +10,7 @@
 }
 
 * {
-    margin: 1px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -108,7 +108,8 @@ nav {
 
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('/placeholder.svg?height=1080&width=1920') center/cover no-repeat;
+    width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('bg2.jfif') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,7 +118,7 @@ nav {
 
 .hero-content {
     background-color: rgba(255, 255, 255, 0.9);
-    width: 90%;
+    width: auto;
     padding: 3rem;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -130,7 +131,7 @@ nav {
 }
 
 .hero h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
     color: var(--primary-color);
 }
@@ -142,9 +143,14 @@ nav {
 section {
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 20px;
 }
 
-.portfolio-grid,
+.portfolio-grid {
+    display: grid;
+    gap: 2rem;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -159,6 +165,7 @@ section {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: auto;
 }
 
 .portfolio-item:hover,
@@ -173,24 +180,33 @@ section {
     object-fit: cover;
 }
 
-.portfolio-info,
+.portfolio-info{
+    padding: 1.5rem;
+}
 .service-item {
     padding: 1.5rem;
     text-align: center;
 }
-
+.service-item p{
+    margin-top: 15px;
+}
 .about {
     display: flex;
     align-items: center;
     gap: 4rem;
 }
-.about-content{
+
+.about-content {
     margin-top: 20px;
     width: 70%;
+    text-wrap: balance;
 }
+
 .about-image img {
     max-width: 100%;
     border-radius: 10px;
+    margin-top: 80px;
+    object-fit: fill;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -229,6 +245,7 @@ section {
 }
 
 footer {
+    margin-top: 20px;
     text-align: center;
     padding: 2rem;
     background-color: var(--secondary-color);
@@ -243,6 +260,7 @@ h2 {
 }
 
 @media (max-width: 768px) {
+
     .hamburger {
         display: block;
     }
@@ -268,16 +286,34 @@ h2 {
         margin: 1.5rem 0;
     }
 
-    
-    .secondary-btn{
+
+    .secondary-btn {
         margin-top: 5px;
     }
+
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1rem;
+    }
+
+    .portfolio-grid,
+    .services-grid {
+        padding: 0 15px 0 15px;
+    }
+
 
     .about {
         flex-direction: column;
     }
-
+    .about-image img {
+        margin: 0;
+    }
     .contact-container {
         flex-direction: column;
+        padding: 0 15px 0 15px;
     }
 }

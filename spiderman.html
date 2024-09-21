@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #b71c1c;
+        }
+
+        canvas {
+            display: block;
+            background-color: #b71c1c;
+            /* Spider-Man red background */
+        }
+    </style>
+    <canvas id="gameCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Web Settings
+        const webColor = '#000000'; // Black web lines
+        const lineWidth = 2;
+        const numCircles = 5; // Number of concentric circles
+        const numSpokes = 10; // Number of radial lines (spokes)
+        const webSize = 80; // Max radius for each web
+
+        // Function to draw a web at a specific location
+        function drawWeb(x, y) {
+            ctx.strokeStyle = webColor;
+            ctx.lineWidth = lineWidth;
+
+            // Draw concentric circles
+            for (let i = 1; i <= numCircles; i++) {
+                ctx.beginPath();
+                const radius = (i / numCircles) * webSize;
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.stroke();
+                ctx.closePath();
+            }
+
+            // Draw radial lines (spokes)
+            for (let i = 0; i < numSpokes; i++) {
+                const angle = (i / numSpokes) * (Math.PI * 2);
+                const webX = x + Math.cos(angle) * webSize;
+                const webY = y + Math.sin(angle) * webSize;
+
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                ctx.lineTo(webX, webY);
+                ctx.stroke();
+                ctx.closePath();
+            }
+        }
+
+        // Event listener to track mouse movement and draw web
+        canvas.addEventListener('mousemove', (event) => {
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+
+            // Draw a web at the current mouse position
+            drawWeb(mouseX, mouseY);
+        });
+
+        // Clear and resize canvas on window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+    </script>
+</body>
+
+</html>

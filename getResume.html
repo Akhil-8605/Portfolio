@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Resume</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -70,23 +69,47 @@
         .download-btn:hover {
             background-color: var(--secondary-color);
         }
-        a{
+
+
+        a {
             text-decoration: none;
             color: #fff;
         }
 
-        @media (max-width:786px ) {
+        .primary-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
 
-            .resume-container{
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+
+        @media (max-width:786px) {
+            .primary-btn{
+                font-size: 8px;
+            }
+            .resume-container {
                 margin-top: 5px;
             }
 
-            button{
+            button {
                 font-size: 8px;
             }
         }
     </style>
-    <button class="btn cta-btn primary-btn" ><a href="index.html">&#8592; Back</a></button>
+    <button class="btn cta-btn primary-btn"><a href="index.html">&#8592; Back</a></button>
     <div class="resume-container">
         <h1>My Resume</h1>
         <div class="resume-image">
