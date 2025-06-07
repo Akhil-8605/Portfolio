@@ -33,8 +33,10 @@ import {
   Cpu,
   Instagram,
   Figma,
+  Bird,
 } from "lucide-react";
-import ResumePDF from "./Assets/AkhilAdam_InternshalaResume.pdf";
+import { FaFeatherAlt } from "react-icons/fa";
+import ResumePDF from "./Assets/Akhil Adam Resume.pdf";
 import "./App.css";
 
 import UnicoreImage1 from "./Assets/Unicore/image1.png";
@@ -235,7 +237,7 @@ export default function App() {
       fullDescription:
         "A powerful and intuitive student marks management system designed to simplify academic performance tracking. It offers advanced features such as subject-wise mark entry, automated grade calculation, and generation of performance reports. The system supports exporting data in both Excel and image formats, making it ideal for documentation and sharing. With customizable reports, clean UI, and accurate analytics, it streamlines result processing for schools, colleges, and coaching centers.",
       tech: ["HTML5", "CSS3", "JavaScript", "Chart.js", "ExcelJS", "Canvas"],
-      link: "https://akhil8605.github.io/students-marks/",
+      link: "https://akhil-8605.github.io/student-marks/",
       images: [
         StudentMarksImage1,
         StudentMarksImage2,
@@ -253,7 +255,7 @@ export default function App() {
         "A comprehensive online marketplace for engineering students to explore, customize, and purchase final year projects.",
       fullDescription:
         "An all-in-one online marketplace tailored for engineering students to discover, customize, and purchase high-quality final year projects. The platform features a wide range of project categories, including electronics, computer science, mechanical, and civil engineering. With detailed project descriptions, demo videos, source code, and support options, students can easily find solutions that match their academic requirements. Built for convenience and credibility, it empowers students to succeed with ready-to-implement, innovation-driven projects.",
-      tech: ["HTML5", "CSS3", "JavaScript",],
+      tech: ["HTML5", "CSS3", "JavaScript"],
       link: "https://akhil-8605.github.io/ProjectNest/",
       images: [
         ProjectNestImage1,
@@ -674,6 +676,23 @@ export default function App() {
                   href: "https://www.linkedin.com/in/akhil-8605-adam/",
                 },
                 {
+                  icon: (
+                    <img
+                      src="https://www.freelancer.com/favicon.ico"
+                      alt="Freelancer"
+                      width={24}
+                      height={24}
+                      style={{
+                        verticalAlign: "middle",
+                        filter:
+                          "grayscale(1) brightness(0.5) sepia(1) hue-rotate(180deg) saturate(0%)",
+                      }}
+                    />
+                  ),
+                  href: "https://www.freelancer.in/u/akhil8605",
+                  title: "Freelancer",
+                },
+                {
                   icon: <Instagram className="w-5 h-5" />,
                   href: "https://www.instagram.com/itz__your__akil/",
                 },
@@ -686,6 +705,7 @@ export default function App() {
                   key={index}
                   href={social.href}
                   className="social-link"
+                  title={social.title? social.title : ""}
                   whileHover={{ scale: 1.2, y: -3 }}
                   whileTap={{ scale: 0.9 }}
                 >
