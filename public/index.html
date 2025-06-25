@@ -1,35 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Portfoilio website showcasing my projects and skills."
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Portfolio Website</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Primary Title & Description -->
+  <title>Akhil Adam – Software Engineer & Creative Developer</title>
+  <meta name="description"
+    content="Akhil Adam | Software Engineer & Creative Developer specializing in modern web and mobile applications. Explore portfolio, services, and contact." />
+  <meta name="keywords"
+    content="Akhil Adam, Akhilesh, Adam , Akhilesh Adam, Software Engineer, Web Developer, Mobile Developer, React, Node.js, Portfolio , Part time , Fresher, Job , Job Seeker, Developer , React developer , Figma , Ui/Ux , Frontend Developer, Backend Developer, Frontend , Backend , Resume" />
+  <meta name="author" content="Akhil Adam" />
+
+  <!-- Canonical & Alternate -->
+  <link rel="canonical" href="https://akhilesh-8605-portfolio.vercel.app/" />
+  <link rel="alternate" href="https://akhilesh-8605-portfolio.vercel.app/" hreflang="en-us" />
+
+  <!-- Robots -->
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://akhilesh-8605-portfolio.vercel.app/" />
+  <meta property="og:title" content="Akhil Adam – Software Engineer & Creative Developer" />
+  <meta property="og:description"
+    content="Explore the portfolio of Akhil Adam: web & mobile apps built with React, Node.js, Firebase and more." />
+  <meta property="og:image" content="https://ik.imagekit.io/akhil8605unicore/Akhilesh%20Profile%20PIC.jpg?updatedAt=1749207129643" />
+  <meta property="og:site_name" content="AkhilAdam.dev" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@your_twitter_handle" />
+  <meta name="twitter:creator" content="@your_twitter_handle" />
+  <meta name="twitter:title" content="Akhil Adam – Software Engineer & Creative Developer" />
+  <meta name="twitter:description"
+    content="Explore the portfolio of Akhil Adam: web & mobile apps built with React, Node.js, Firebase and more." />
+  <meta name="twitter:image" content="https://ik.imagekit.io/akhil8605unicore/Akhilesh%20Profile%20PIC.jpg?updatedAt=1749207129643" />
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Structured Data: Person & Website -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://akhilesh-8605-portfolio.vercel.app/",
+        "name": "Akhil Adam",
+        "url": "https://akhilesh-8605-portfolio.vercel.app/",
+        "sameAs": [
+          "https://github.com/akhil8605",
+          "https://www.linkedin.com/in/akhil-8605-adam/",
+          "https://www.instagram.com/itz__your__akil/",
+          "https://akhilesh-8605-portfolio.vercel.app/static/media/Akhil%20Adam%20Resume.46b884d2b501932c7960.pdf",
+        ],
+        "jobTitle": "Software Engineer & Creative Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance",
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://akhilesh-8605-portfolio.vercel.app/#services",
+        "url": "https://akhilesh-8605-portfolio.vercel.app/",
+        "name": "Akhil Adam Portfolio",
+        "publisher": {
+          "@id": "https://akhilesh-8605-portfolio.vercel.app/"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://akhilesh-8605-portfolio.vercel.app/#services",
+          "query-input": "required name=services"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preconnect & Prefetch for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+  <link rel="preload" href="/main.css" as="style" />
+
+  <!-- Sitemap & Robots.txt -->
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Search AkhilAdam.dev" />
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -39,5 +110,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
