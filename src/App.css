@@ -447,7 +447,7 @@ body {
 
 .about-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 6rem;
   align-items: start;
 }
@@ -619,11 +619,9 @@ body {
 
 .enhanced-skill-card:hover {
   border-color: rgba(139, 92, 246, 0.3);
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.02),
-    rgba(168, 85, 247, 0.02)
-  );
+  background: linear-gradient(135deg,
+      rgba(139, 92, 246, 0.02),
+      rgba(168, 85, 247, 0.02));
 }
 
 .skill-card-header {
@@ -701,12 +699,10 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.3),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent);
   animation: shimmer 2s infinite;
 }
 
@@ -714,6 +710,7 @@ body {
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(100%);
   }
@@ -844,28 +841,12 @@ body {
 }
 
 .enhanced-service-icon {
-  width: 80px;
-  height: 80px;
+  width: fit-content;
+  height: fit-content;
   border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+  color: skyblue;
   position: relative;
-  overflow: hidden;
-}
-
-.enhanced-service-icon::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: inherit;
-  filter: blur(20px);
-  opacity: 0.3;
-  transform: scale(1.2);
+  transform: translatex(-10px);
 }
 
 .service-number {
@@ -883,6 +864,9 @@ body {
 }
 
 .service-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.8rem;
   color: #1a1a1a;
   margin-bottom: 1rem;
@@ -934,11 +918,13 @@ body {
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     transform: scale(1);
     opacity: 0.2;
   }
+
   50% {
     transform: scale(1.2);
     opacity: 0.1;
@@ -967,11 +953,9 @@ body {
   left: -50%;
   right: -50%;
   bottom: -50%;
-  background: radial-gradient(
-    circle,
-    rgba(139, 92, 246, 0.1) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(circle,
+      rgba(139, 92, 246, 0.1) 0%,
+      transparent 70%);
   pointer-events: none;
 }
 
@@ -1246,11 +1230,77 @@ body {
   color: #374151;
 }
 
+.switch {
+  position: relative;
+  width: 85px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.switch.on {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.switch.off {
+  background: black;
+  border-color: #444;
+}
+
+.switch-handle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 26px;
+  height: 26px;
+  background: white;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.switch-text {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.on-text {
+  left: 12px;
+  opacity: 0;
+  color: #6b7280;
+}
+
+.off-text {
+  right: 10px;
+  opacity: 1;
+}
+
+.switch.on .on-text {
+  opacity: 1;
+}
+
+.switch.on .off-text {
+  opacity: 0;
+}
+
 .modal-body {
   display: grid;
   /* grid-template-columns: 1fr 1fr; */
   gap: 3rem;
   padding: 3rem;
+  padding-top: 5rem;
 }
 
 .modal-images {
@@ -1407,6 +1457,12 @@ body {
 }
 
 @media (max-width: 768px) {
+  .nav {
+    max-width: 90%;
+    min-width: 90%;
+    width: 90%;
+  }
+
   .nav-links {
     display: none;
   }
@@ -1545,9 +1601,10 @@ html {
 /* Mobile View CSS - Add these at the end of your existing CSS file */
 
 @media (max-width: 480px) {
+
   /* Header */
   .nav {
-    padding: 0 1rem;
+    padding: 0;
   }
 
   .logo span {
@@ -1738,9 +1795,6 @@ html {
 
 /* Fix for navigation on mobile */
 @media (max-width: 768px) {
-  .nav {
-    position: relative;
-  }
 
   .cta-button {
     padding: 0.6rem 1.2rem;

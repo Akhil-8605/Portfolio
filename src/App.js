@@ -34,76 +34,13 @@ import {
   Instagram,
   Figma,
   Bird,
+  Brain,
 } from "lucide-react";
 import { FaFeatherAlt } from "react-icons/fa";
 import ResumePDF from "./Assets/Akhil Adam Resume.pdf";
 import { Helmet } from "react-helmet"
 import "./App.css";
-
-import UnicoreImage1 from "./Assets/Unicore/image1.png";
-import UnicoreImage2 from "./Assets/Unicore/image2.png";
-import UnicoreImage3 from "./Assets/Unicore/image3.png";
-import UnicoreImage4 from "./Assets/Unicore/image4.png";
-import UnicoreImage5 from "./Assets/Unicore/image5.png";
-import UnicoreImage6 from "./Assets/Unicore/image6.png";
-import UnicoreImage7 from "./Assets/Unicore/image7.png";
-import UnicoreImage8 from "./Assets/Unicore/image8.png";
-import UnicoreImage9 from "./Assets/Unicore/image9.png";
-import UnicoreImage10 from "./Assets/Unicore/image10.png";
-
-import KiteesImage1 from "./Assets/Kitees/image1.png";
-import KiteesImage2 from "./Assets/Kitees/image2.png";
-import KiteesImage3 from "./Assets/Kitees/image3.png";
-import KiteesImage4 from "./Assets/Kitees/image4.png";
-import KiteesImage5 from "./Assets/Kitees/image5.png";
-import KiteesImage6 from "./Assets/Kitees/image6.png";
-import KiteesImage7 from "./Assets/Kitees/image7.png";
-import KiteesImage8 from "./Assets/Kitees/image8.png";
-import KiteesImage9 from "./Assets/Kitees/image9.png";
-import KiteesImage10 from "./Assets/Kitees/image10.png";
-
-import FutureMindsImage1 from "./Assets/Futureminds/image1.png";
-import FutureMindsImage2 from "./Assets/Futureminds/image2.png";
-import FutureMindsImage3 from "./Assets/Futureminds/image3.png";
-import FutureMindsImage4 from "./Assets/Futureminds/image4.png";
-import FutureMindsImage5 from "./Assets/Futureminds/image5.png";
-import FutureMindsImage6 from "./Assets/Futureminds/image6.png";
-import FutureMindsImage7 from "./Assets/Futureminds/image7.png";
-import FutureMindsImage8 from "./Assets/Futureminds/image8.png";
-
-import TextNTalkImage1 from "./Assets/Textntalk/image1.jpg";
-import TextNTalkImage2 from "./Assets/Textntalk/image2.jpg";
-import TextNTalkImage3 from "./Assets/Textntalk/image3.jpg";
-import TextNTalkImage4 from "./Assets/Textntalk/image4.jpg";
-import TextNTalkImage5 from "./Assets/Textntalk/image5.jpg";
-import TextNTalkImage6 from "./Assets/Textntalk/image6.jpg";
-import TextNTalkImage7 from "./Assets/Textntalk/image7.jpg";
-import TextNTalkImage8 from "./Assets/Textntalk/image8.jpg";
-import TextNTalkImage9 from "./Assets/Textntalk/image9.jpg";
-import TextNTalkImage10 from "./Assets/Textntalk/image10.jpg";
-
-import GroceryImage1 from "./Assets/Grocery/image1.png";
-import GroceryImage2 from "./Assets/Grocery/image2.png";
-import GroceryImage3 from "./Assets/Grocery/image3.png";
-import GroceryImage4 from "./Assets/Grocery/image4.png";
-import GroceryImage5 from "./Assets/Grocery/image5.png";
-import GroceryImage6 from "./Assets/Grocery/image6.png";
-import GroceryImage7 from "./Assets/Grocery/image7.png";
-
-import StudentMarksImage1 from "./Assets/Studentmarks/image1.png";
-import StudentMarksImage2 from "./Assets/Studentmarks/image2.png";
-import StudentMarksImage3 from "./Assets/Studentmarks/image3.png";
-import StudentMarksImage4 from "./Assets/Studentmarks/image4.png";
-import StudentMarksImage5 from "./Assets/Studentmarks/image5.png";
-
-import ProjectNestImage1 from "./Assets/Projectnest/image1.png";
-import ProjectNestImage2 from "./Assets/Projectnest/image2.png";
-import ProjectNestImage3 from "./Assets/Projectnest/image3.png";
-import ProjectNestImage4 from "./Assets/Projectnest/image4.png";
-import ProjectNestImage5 from "./Assets/Projectnest/image5.png";
-import ProjectNestImage6 from "./Assets/Projectnest/image6.png";
-import ProjectNestImage7 from "./Assets/Projectnest/image7.png";
-import ProjectNestImage8 from "./Assets/Projectnest/image8.png";
+import { projects } from "./Projects";
 
 export default function App() {
   const [activeProject, setActiveProject] = useState(null);
@@ -112,165 +49,6 @@ export default function App() {
   const [activeSkillCategory, setActiveSkillCategory] = useState("All");
   const { scrollYProgress } = useScroll();
   const yRange = useTransform(scrollYProgress, [0, 1], [0, -100]);
-
-  const projects = [
-    {
-      id: 1,
-      title: "Unicore",
-      category: "Web Application",
-      description:
-        "A modern University Management System designed to efficiently handle academic and administrative tasks for mid-level institutions",
-      fullDescription:
-        "The University Management System is a modern, user-friendly platform built to streamline and manage day-to-day academic and administrative operations for mid-sized universities. It includes features like student dashboard, admin panel, course scheduling, events management, notice board, class-test result, and library management — all within a centralized dashboard. Designed with a clean UI and scalable architecture, this system simplifies coordination across departments and improves overall institutional efficiency.",
-      tech: ["React", "Node.js", "Firebase", "Firestore"],
-      link: "https://unicore-8605.vercel.app",
-      images: [
-        UnicoreImage1,
-        UnicoreImage2,
-        UnicoreImage3,
-        UnicoreImage4,
-        UnicoreImage5,
-        UnicoreImage6,
-        UnicoreImage7,
-        UnicoreImage8,
-        UnicoreImage9,
-        UnicoreImage10,
-      ],
-      color: "from-purple-500 to-pink-500",
-    },
-    {
-      id: 2,
-      title: "Kitees",
-      category: "E-commerce",
-      description:
-        "A modern e-commerce platform for electronics kits and components, tailored for electronics students and enthusiasts.",
-      fullDescription:
-        "An innovative e-commerce platform crafted specifically for electronics students and hobbyists, offering a wide range of electronic kits, components, and DIY tools. The platform features a clean, intuitive interface with smart filtering, detailed product information, student-friendly pricing, and secure checkout. Designed to support academic projects and hands-on learning, it simplifies the process of finding and purchasing quality components needed for practical electronics work.",
-      tech: ["React", "Node.js", "Firebase", "Framer Motion", "Firestore"],
-      link: "https://kitees.vercel.app",
-      images: [
-        KiteesImage1,
-        KiteesImage2,
-        KiteesImage3,
-        KiteesImage4,
-        KiteesImage5,
-        KiteesImage6,
-        KiteesImage7,
-        KiteesImage8,
-        KiteesImage9,
-        KiteesImage10,
-      ],
-      color: "from-blue-500 to-cyan-500",
-    },
-    {
-      id: 3,
-      title: "FutureMinds",
-      category: "Corporate Website",
-      description:
-        "High-end company website with advanced animations for organizing summer vacation programs for kids.",
-      fullDescription:
-        "An award-winning company website featuring cutting-edge animations and modern design principles. Built for a company organizing summer vacation programs for children, with interactive elements, engaging user experience, advanced CSS animations, and optimized performance for all devices.",
-      tech: ["React", "Framer Motion", "GSAP", "CSS3"],
-      link: "https://futureminds-fun.vercel.app",
-      images: [
-        FutureMindsImage1,
-        FutureMindsImage2,
-        FutureMindsImage3,
-        FutureMindsImage4,
-        FutureMindsImage5,
-        FutureMindsImage6,
-        FutureMindsImage7,
-        FutureMindsImage8,
-      ],
-      color: "from-green-500 to-teal-500",
-    },
-    {
-      id: 4,
-      title: "TextNTalk",
-      category: "Mobile Application",
-      description:
-        "Advanced Android translation app with AI-powered features supporting five Indian languages.",
-      fullDescription:
-        "Sophisticated Android application built with Java and XML, featuring ML Kit integration. Supports real-time translation between five Indian languages, includes advanced text-to-speech functionality, image text recognition using machine learning, offline translation capabilities, and AI-powered word descriptions with contextual explanations.",
-      tech: ["Android Studio", "Java", "XML", "ML Kit", "Firebase"],
-      link: "#",
-      images: [
-        TextNTalkImage1,
-        TextNTalkImage2,
-        TextNTalkImage3,
-        TextNTalkImage4,
-        TextNTalkImage5,
-        TextNTalkImage6,
-        TextNTalkImage7,
-        TextNTalkImage8,
-        TextNTalkImage9,
-        TextNTalkImage10,
-      ],
-      color: "from-orange-500 to-red-500",
-    },
-    {
-      id: 5,
-      title: "Grocery",
-      category: "E-commerce",
-      description:
-        "A modern online grocery platform with seamless payment integration and real-time delivery tracking.",
-      fullDescription:
-        "A user-centric online grocery platform designed for a smooth shopping experience, featuring a modern UI, secure payment integration, and real-time delivery tracking. Customers can browse a wide range of grocery items, place orders with ease, and monitor deliveries from dispatch to doorstep. The platform ensures convenience, speed, and reliability, making everyday grocery shopping smarter and more efficient.",
-      tech: ["HTML5", "CSS3", "JavaScript", "Firestore"],
-      link: "https://akhil-8605.github.io/grocery/",
-      images: [
-        GroceryImage1,
-        GroceryImage2,
-        GroceryImage3,
-        GroceryImage4,
-        GroceryImage5,
-        GroceryImage6,
-        GroceryImage7,
-      ],
-      color: "from-emerald-500 to-green-500",
-    },
-    {
-      id: 6,
-      title: "Student Marks Management",
-      category: "Educational Tool",
-      description:
-        "A comprehensive student marks management system with advanced Excel/image export and detailed reporting features.",
-      fullDescription:
-        "A powerful and intuitive student marks management system designed to simplify academic performance tracking. It offers advanced features such as subject-wise mark entry, automated grade calculation, and generation of performance reports. The system supports exporting data in both Excel and image formats, making it ideal for documentation and sharing. With customizable reports, clean UI, and accurate analytics, it streamlines result processing for schools, colleges, and coaching centers.",
-      tech: ["HTML5", "CSS3", "JavaScript", "Chart.js", "ExcelJS", "Canvas"],
-      link: "https://akhil-8605.github.io/student-marks/",
-      images: [
-        StudentMarksImage1,
-        StudentMarksImage2,
-        StudentMarksImage3,
-        StudentMarksImage4,
-        StudentMarksImage5,
-      ],
-      color: "from-yellow-500 to-orange-500",
-    },
-    {
-      id: 7,
-      title: "ProjectNest",
-      category: "Marketplace",
-      description:
-        "A comprehensive online marketplace for engineering students to explore, customize, and purchase final year projects.",
-      fullDescription:
-        "An all-in-one online marketplace tailored for engineering students to discover, customize, and purchase high-quality final year projects. The platform features a wide range of project categories, including electronics, computer science, mechanical, and civil engineering. With detailed project descriptions, demo videos, source code, and support options, students can easily find solutions that match their academic requirements. Built for convenience and credibility, it empowers students to succeed with ready-to-implement, innovation-driven projects.",
-      tech: ["HTML5", "CSS3", "JavaScript"],
-      link: "https://akhil-8605.github.io/ProjectNest/",
-      images: [
-        ProjectNestImage1,
-        ProjectNestImage2,
-        ProjectNestImage3,
-        ProjectNestImage4,
-        ProjectNestImage5,
-        ProjectNestImage6,
-        ProjectNestImage7,
-        ProjectNestImage8,
-      ],
-      color: "from-indigo-500 to-purple-500",
-    },
-  ];
 
   const services = [
     {
@@ -316,19 +94,20 @@ export default function App() {
       bgPattern: "design-pattern",
     },
     {
-      icon: <Gamepad2 className="w-8 h-8" />,
-      title: "Game Development",
+      icon: <Brain className="w-8 h-8" />,
+      title: "Artificial Intelligence",
       description:
-        "Developing engaging games using Unreal Engine and Unity Engine",
+        "Building intelligent systems using machine learning, neural networks, and natural language processing.",
       features: [
-        "3D Modeling",
-        "Game Mechanics",
-        "Level Design",
-        "Cross-platform",
+        "Machine Learning",
+        "Deep Learning",
+        "Natural Language Processing",
+        "AI Automation",
       ],
-      color: "from-purple-500 to-pink-500",
-      bgPattern: "game-pattern",
+      color: "from-blue-500 to-cyan-500",
+      bgPattern: "ai-pattern",
     },
+
   ];
 
   const skills = [
@@ -465,8 +244,16 @@ export default function App() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  const [autoSlide, setAutoSlide] = useState(true); // 🔹 new state for auto/manual toggle
+
   useEffect(() => {
     if (activeProject) {
+      setCurrentImageIndex(0); // always start from first image
+    }
+  }, [activeProject]);
+
+  useEffect(() => {
+    if (activeProject && autoSlide) { // 🔹 only auto-slide if enabled
       const interval = setInterval(() => {
         const project = projects.find((p) => p.id === activeProject);
         if (project) {
@@ -475,7 +262,8 @@ export default function App() {
       }, 4000);
       return () => clearInterval(interval);
     }
-  }, [activeProject]);
+  }, [activeProject, autoSlide]);
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -505,6 +293,16 @@ export default function App() {
   };
 
   const activeProjectData = projects.find((p) => p.id === activeProject);
+
+  let isMobileView = window.innerWidth < 768;
+
+  useEffect(() => {
+    const handleResize = () => {
+      isMobileView = window.innerWidth < 768;
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
@@ -791,42 +589,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* Stats Section */}
-        {/* <motion.section
-        className="stats-section"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <div className="container">
-          <div className="stats-grid">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="stat-card"
-                variants={itemVariants}
-              >
-                <div className="stat-icon">{stat.icon}</div>
-                <motion.div
-                  className="stat-number"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{
-                    delay: index * 0.1,
-                    type: "spring",
-                    stiffness: 200,
-                  }}
-                >
-                  {stat.number}
-                </motion.div>
-                <div className="stat-label">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section> */}
-
         {/* About Section */}
         <motion.section
           id="about"
@@ -860,27 +622,43 @@ export default function App() {
                   <div className="timeline">
                     <motion.div
                       className="timeline-item"
-                      whileHover={{ x: 10 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
                       <div className="timeline-dot" />
-                      <div className="timeline-content">
-                        <h4>Diploma in Computer Science & Engineering</h4>
-                        <p>SPM Polytechnic College (2022 - 2025)</p>
-                        <span className="timeline-year">Current</span>
-                      </div>
-                    </motion.div>
-                    <motion.div
-                      className="timeline-item"
-                      whileHover={{ x: 10 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <div className="timeline-dot" />
-                      <div className="timeline-content">
+                      <motion.div
+                        whileHover={{ x: 10 }}
+                        transition={{ type: "spring", stiffness: 300 }} className="timeline-content">
                         <h4>Secondary (X) SSC</h4>
                         <p>Shri Markandeya High School</p>
                         <span className="timeline-year">2022 - 84.20%</span>
-                      </div>
+                      </motion.div>
+                    </motion.div>
+                    <motion.div
+                      className="timeline-item"
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      <div className="timeline-dot" />
+                      <motion.div
+                        whileHover={{ x: 10 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                        className="timeline-content">
+                        <h4>Diploma in Computer Science & Engineering</h4>
+                        <p>SPM Polytechnic College, Kumthe, Solapur (2022 - 2025)</p>
+                        <span className="timeline-year">2025 - 79.54%</span>
+                      </motion.div>
+                    </motion.div>
+                    <motion.div
+                      className="timeline-item"
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      <div className="timeline-dot" />
+                      <motion.div
+                        whileHover={{ x: 10 }}
+                        transition={{ type: "spring", stiffness: 300 }} className="timeline-content">
+                        <h4>B.Tech in Computer Science & Engineering</h4>
+                        <p>MAEER's MIT College of Railway Engineering and Research, Barshi</p>
+                        <span className="timeline-year">2025 - Current</span>
+                      </motion.div>
                     </motion.div>
                   </div>
                 </div>
@@ -1014,15 +792,14 @@ export default function App() {
 
                   <div className="service-card-content">
                     <div className="service-header">
-                      <div
-                        className={`enhanced-service-icon bg-gradient-to-r ${service.color}`}
-                      >
-                        {service.icon}
-                      </div>
+                      <h3 className="service-title">
+                        <div className={`enhanced-service-icon`}>
+                          {service.icon}
+                        </div>
+                        {service.title}
+                      </h3>
                       <div className="service-number">0{index + 1}</div>
                     </div>
-
-                    <h3 className="service-title">{service.title}</h3>
                     <p className="service-description">{service.description}</p>
 
                     <div className="service-features-enhanced">
@@ -1218,6 +995,24 @@ export default function App() {
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 onClick={(e) => e.stopPropagation()}
               >
+                <motion.div
+                  className={`modal-close switch ${autoSlide ? "on" : "off"}`}
+                  style={{ translateX: "50px" }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setAutoSlide(!autoSlide)}
+                >
+                  <motion.div
+                    className="switch-handle"
+                    animate={{
+                      x: autoSlide ? 50 : 0,
+                    }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  />
+                  <span className="switch-text on-text">Play</span>
+                  <span className="switch-text off-text">Pause</span>
+                </motion.div>
+
                 <motion.button
                   className="modal-close"
                   whileHover={{ scale: 1.1, rotate: 90 }}
@@ -1230,14 +1025,14 @@ export default function App() {
                   className="modal-body"
                   style={{
                     gridTemplateColumns:
-                      activeProjectData.id == 4 ? "1fr 1fr" : "1fr",
+                      isMobileView ? "1fr" : activeProjectData.isApplication ? "1fr 1fr" : "1fr",
                   }}
                 >
                   <div className="modal-images">
                     <div
                       className="image-carousel"
                       style={{
-                        minHeight: activeProjectData.id == 4 ? "600px" : "none",
+                        minHeight: activeProjectData.isApplication ? "600px" : "none",
                       }}
                     >
                       <AnimatePresence mode="wait">
