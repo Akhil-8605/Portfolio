@@ -319,7 +319,7 @@ export default function App() {
         <meta property="og:url" content="https://akhilesh-8605-portfolio.vercel.app/" />
         <meta property="og:title" content="Akhil Adam – Software Engineer & Creative Developer" />
         <meta property="og:description" content="Explore the portfolio of Akhil Adam: web & mobile apps built with React, Node.js, Firebase and more." />
-        <meta property="og:image" content="https://ik.imagekit.io/akhil8605unicore/Akhilesh%20Profile%20PIC.jpg?updatedAt=1749207129643" />
+        <meta property="og:image" content="https://ik.imagekit.io/akhil8605unicore/Akhilesh%20Profile%20PIC.jpg?updatedAt=1763131380442" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -327,7 +327,7 @@ export default function App() {
         <meta name="twitter:creator" content="@your_twitter_handle" />
         <meta name="twitter:title" content="Akhil Adam – Software Engineer & Creative Developer" />
         <meta name="twitter:description" content="Explore the portfolio of Akhil Adam: web & mobile apps built with React, Node.js, Firebase and more." />
-        <meta name="twitter:image" content="https://ik.imagekit.io/akhil8605unicore/Akhilesh%20Profile%20PIC.jpg?updatedAt=1749207129643" />
+        <meta name="twitter:image" content="https://ik.imagekit.io/akhil8605unicore/Akhilesh%20Profile%20PIC.jpg?updatedAt=1763131380442" />
 
         {/* Robots */}
         <meta name="robots" content="index, follow" />
@@ -338,7 +338,7 @@ export default function App() {
             "@context": "https://schema.org",
             "@type": "Person",
             name: "Akhil Adam",
-            url: "https://ik.imagekit.io/akhil8605unicore/Akhilesh%20Profile%20PIC.jpg?updatedAt=1749207129643",
+            url: "https://ik.imagekit.io/akhil8605unicore/Akhilesh%20Profile%20PIC.jpg?updatedAt=1763131380442",
             sameAs: [
               "https://github.com/akhil8605",
               "https://www.linkedin.com/in/akhil-8605-adam/",
@@ -571,7 +571,7 @@ export default function App() {
               >
                 <div className="profile-glow" />
                 <img
-                  src="https://ik.imagekit.io/akhil8605unicore/Akhilesh%20Profile%20PIC.jpg?updatedAt=1749207129643"
+                  src="https://ik.imagekit.io/akhil8605unicore/Akhilesh%20Profile%20PIC.jpg?updatedAt=1763131380442"
                   alt="Akhil Adam"
                   className="profile-img"
                 />
