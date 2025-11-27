@@ -103,6 +103,17 @@ import WaterManagerImage9 from "./Assets/WaterManager/image9.jpg"
 import WaterManagerImage10 from "./Assets/WaterManager/image10.jpg"
 import WaterManagerImage11 from "./Assets/WaterManager/image11.jpg"
 
+import AnmolTravelsImage1 from "./Assets/Anmol Travels/image1.png";
+import AnmolTravelsImage2 from "./Assets/Anmol Travels/image2.png";
+import AnmolTravelsImage3 from "./Assets/Anmol Travels/image3.png";
+import AnmolTravelsImage4 from "./Assets/Anmol Travels/image4.png";
+import AnmolTravelsImage5 from "./Assets/Anmol Travels/image5.png";
+import AnmolTravelsImage6 from "./Assets/Anmol Travels/image6.png";
+import AnmolTravelsImage7 from "./Assets/Anmol Travels/image7.png";
+import AnmolTravelsImage8 from "./Assets/Anmol Travels/image8.png";
+import AnmolTravelsIImage9 from "./Assets/Anmol Travels/image9.png";
+import AnmolTravelsImage10 from "./Assets/Anmol Travels/image10.png";
+
 export const projects = [
     {
         id: 1,
@@ -208,6 +219,28 @@ export const projects = [
     },
     {
         id: 5,
+        title: "Anmol Tours & Travels",
+        category: "Corporate Website",
+        description: "A modern corporate website for a rental car and bus service provider with clean UI, service listings, and booking features.",
+        fullDescription: "A professional corporate website designed for Anmol Tours & Travels, offering rental cars, buses, tempo travelers, and customizable travel packages. The site includes service showcases, pricing sections, customer inquiry forms, and optimized mobile responsiveness. Built with smooth animations and a trustworthy brand-focused design.",
+        tech: ["React", "Framer Motion", "WhatsApp Integration"],
+        link: "https://anmoltravels.vercel.app",
+        images: [
+            AnmolTravelsImage1,
+            AnmolTravelsImage2,
+            AnmolTravelsImage3,
+            AnmolTravelsImage4,
+            AnmolTravelsImage5,
+            AnmolTravelsImage6,
+            AnmolTravelsImage7,
+            AnmolTravelsImage8,
+            AnmolTravelsIImage9,
+            AnmolTravelsImage10,
+        ],
+        color: "from-blue-500 to-cyan-500",
+    },
+    {
+        id: 6,
         title: "FutureMinds",
         category: "Corporate Website",
         description: "High-end company website with advanced animations for organizing summer vacation programs for kids.",
@@ -227,7 +260,7 @@ export const projects = [
         color: "from-green-500 to-teal-500",
     },
     {
-        id: 6,
+        id: 7,
         title: "Vishwalatarati",
         category: "Corporate Website",
         description:
@@ -251,7 +284,7 @@ export const projects = [
         color: "from-blue-500 to-cyan-500",
     },
     {
-        id: 7,
+        id: 8,
         title: "TextNTalk",
         isApplication: true,
         category: "Mobile Application",
@@ -276,7 +309,7 @@ export const projects = [
         color: "from-orange-500 to-red-500",
     },
     {
-        id: 8,
+        id: 9,
         title: "Grocery",
         category: "E-commerce",
         description:
@@ -297,7 +330,7 @@ export const projects = [
         color: "from-emerald-500 to-green-500",
     },
     {
-        id: 9,
+        id: 10,
         title: "Student Marks Management",
         category: "Educational Tool",
         description:
@@ -316,7 +349,7 @@ export const projects = [
         color: "from-yellow-500 to-orange-500",
     },
     {
-        id: 10,
+        id: 11,
         title: "ProjectNest",
         category: "Marketplace",
         description:

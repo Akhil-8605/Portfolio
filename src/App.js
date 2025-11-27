@@ -35,12 +35,18 @@ import {
   Figma,
   Bird,
   Brain,
+  ZapIcon,
+  SmartphoneNfc,
 } from "lucide-react";
 import { FaFeatherAlt } from "react-icons/fa";
 import ResumePDF from "./Assets/Akhil Adam Resume.pdf";
 import { Helmet } from "react-helmet"
 import "./App.css";
 import { projects } from "./Projects";
+import { FcNext } from "react-icons/fc";
+import { BiMobile } from "react-icons/bi";
+import { CiMobile3 } from "react-icons/ci";
+import { CgSmartphoneRam } from "react-icons/cg";
 
 export default function App() {
   const [activeProject, setActiveProject] = useState(null);
@@ -119,6 +125,13 @@ export default function App() {
       color: "#61DAFB",
     },
     {
+      name: "Next.js",
+      level: 85,
+      category: "Frontend",
+      icon: <FcNext className="w-5 h-5" />,
+      color: "#61DAFB",
+    },
+    {
       name: "Node.js",
       level: 75,
       category: "Backend",
@@ -133,7 +146,14 @@ export default function App() {
       color: "#47A248",
     },
     {
-      name: "Android",
+      name: "Python",
+      level: 50,
+      category: "Artificial Intelligence",
+      icon: <Brain className="w-5 h-5" />,
+      color: "#47A248",
+    },
+    {
+      name: "Android Studio",
       level: 88,
       category: "Mobile",
       icon: <Smartphone className="w-5 h-5" />,
@@ -164,7 +184,7 @@ export default function App() {
       name: "React Native",
       level: 80,
       category: "Mobile",
-      icon: <Layers className="w-5 h-5" />,
+      icon: <Smartphone className="w-5 h-5" />,
       color: "#61DAFB",
     },
     {
@@ -201,6 +221,7 @@ export default function App() {
     "All",
     "Frontend",
     "Backend",
+    "Artificial Intelligence",
     "Mobile",
     "Programming",
     "Cloud",
@@ -337,7 +358,7 @@ export default function App() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Person",
-            name: "Akhil Adam",
+            name: "Akhilesh Adam",
             url: "https://ik.imagekit.io/akhil8605unicore/Akhilesh%20Profile%20PIC.jpg?updatedAt=1763131380442",
             sameAs: [
               "https://github.com/akhil8605",
@@ -345,6 +366,7 @@ export default function App() {
               "https://www.instagram.com/itz__your__akil/",
               "https://www.freelancer.in/u/akhil8605",
               "https://akhilesh-8605-portfolio.vercel.app/static/media/Akhil%20Adam%20Resume.46b884d2b501932c7960.pdf",
+              "https://akhilesh-8605-portfolio.vercel.app/",
             ],
             jobTitle: "Software Engineer & Creative Developer"
           })}
@@ -378,7 +400,7 @@ export default function App() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>Akhil Adam</span>
+              <span>Akhilesh Adam</span>
             </motion.div>
             <div className="nav-links">
               {["Home", "About", "Services", "Projects", "Contact"].map(
